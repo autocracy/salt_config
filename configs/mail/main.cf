@@ -20,7 +20,7 @@ smtpd_sasl_path = private/auth
 smtpd_sasl_security_options = noanonymous
 smtpd_tls_auth_only = yes
 
-smtpd_tls_cert_file = /etc/letsencrypt/live/storyinmemo.com/cert.pem
+smtpd_tls_cert_file = /etc/letsencrypt/live/storyinmemo.com/fullchain.pem
 smtpd_tls_key_file = /etc/letsencrypt/live/storyinmemo.com/privkey.pem
 smtpd_tls_security_level = may
 smtpd_tls_loglevel = 1
