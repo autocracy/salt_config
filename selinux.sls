@@ -1,0 +1,3 @@
+selinux-utils:
+  pkg:
+    - installed

@@ -1,0 +1,5 @@
+base:
+  '*':
+    - postfix
+    - dovecot
+    - user
