@@ -28,6 +28,7 @@ smtpd_tls_protocols = !SSLv2, !SSLv3
 smtpd_tls_ciphers = medium
 smtp_tls_protocols = !SSLv2, !SSLv3
 smtp_tls_ciphers = medium
+
 #relayhost = 
 mynetworks = 127.0.0.0/8
 mailbox_size_limit = 0
@@ -38,6 +39,7 @@ home_mailbox = Maildir/
 #Spammage
 smtpd_delay_reject = yes
 smtpd_helo_required = yes
+smtpd_sender_restrictions = hash:/etc/postfix/access
 
 smtpd_client_restrictions = 
     reject_rbl_client cbl.abuseat.org
