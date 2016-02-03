@@ -17,3 +17,7 @@
     - contents: |
         master: salt.storyinmemo.com
         ipv6: True
+
+/etc/profile:
+  file.append:
+    - text: export EDITOR=vim
