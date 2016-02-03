@@ -1,5 +1,9 @@
 base:
   '*':
+    - user
+    - basic
+  'karl.storyinmemo.com':
     - postfix
     - dovecot
-    - user
+  'raspberry.storyinmemo.com':
+    - saltmaster

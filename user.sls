@@ -3,6 +3,8 @@
   user.present:
     - uid: {{ pillar['users'][user]['uid'] }}
     - password: {{ pillar['users'][user]['password'] }}
+    - optional_groups:
+      - sudo
 
 /home/{{ user }}/.gitconfig:
   file.managed:
