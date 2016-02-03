@@ -2,6 +2,7 @@ base:
   '*':
     - user
     - basic
+    - ssh
   'karl.storyinmemo.com':
     - postfix
     - dovecot
