@@ -22,6 +22,12 @@ postfix:
     - require:
       - pkg: postfix
 
+update-aliases:
+  cmd.wait:
+    - name: newaliases
+    - watch:
+      - file: /etc/aliases
+
 /etc/postfix/access:
   file.managed:
     - contents_pillar: postfix_access
@@ -34,8 +40,15 @@ update-access:
     - watch:
       - file: /etc/postfix/access
 
-update-aliases:
+# TODO create array of dict with source, output, and map commands...
+/etc/postfix/sender_access:
+  file.managed:
+    - contents_pillar: postfix_sender_access
+    - require:
+      - pkg: postfix
+
+update-sender-access:
   cmd.wait:
-    - name: newaliases
+    - name: postmap /etc/postfix/sender_access
     - watch:
-      - file: /etc/aliases
+      - file: /etc/postfix/sender_access
