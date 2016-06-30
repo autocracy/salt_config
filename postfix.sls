@@ -1,3 +1,9 @@
+postgrey:
+  pkg:
+    - installed
+  service:
+    - running
+
 postfix:
   pkg:
     - installed
