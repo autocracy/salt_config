@@ -43,4 +43,4 @@
 /etc/profile:
   file.append:
     - text: export EDITOR=vim
-    - alias gpg=gpg2
+    - text: alias gpg=gpg2
