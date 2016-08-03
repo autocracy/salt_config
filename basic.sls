@@ -1,7 +1,16 @@
 {%- if grains.os == "MacOS" %}
 {%- for package in [
-  'saltstack',
+  'coreutils',
+  'findutils',
+  'gnu-tar',
+  'gnu-sed',
+  'gawk',
+  'gnupg2',
+  'gnutls',
+  'gnu-indent',
+  'gnu-getopt',
   'mobile-shell',
+  'saltstack',
   ] %}
 {{ package }}:
   pkg:
@@ -12,6 +21,7 @@
   'atop',
   'chrony',
   'git',
+  'gnupg2',
   'make',
   'mosh',
   'salt-minion',
@@ -33,3 +43,4 @@
 /etc/profile:
   file.append:
     - text: export EDITOR=vim
+    - alias gpg=gpg2
