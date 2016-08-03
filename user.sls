@@ -3,6 +3,7 @@
   user.present:
     - uid: {{ pillar['users'][user]['uid'] }}
     - password: {{ pillar['users'][user]['password'] }}
+    - shell: /bin/bash
     - optional_groups:
       - sudo
 
