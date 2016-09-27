@@ -16,10 +16,16 @@
   pkg:
     - installed
 {%- endfor %}
+
 {%- else %}
+{%- if grains.os == "CentOS" %}
+epel:
+  pkg.installed
+{% endif %}
 {%- for package in [
   'atop',
   'chrony',
+  'fail2ban',
   'git',
   'gnupg2',
   'make',
