@@ -19,7 +19,7 @@
 
 {%- else %}
 {%- if grains.os == "CentOS" %}
-epel:
+epel-release:
   pkg.installed
 {% endif %}
 {%- for package in [
